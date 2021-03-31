@@ -167,6 +167,8 @@ const initial = () => {
   holdBtn.style.display = 'block';
   score0.textContent = 0;
   score1.textContent = 0;
+  currentScore0.textContent = 0;
+  currentScore1.textContent = 0;
 };
 
 initial();
