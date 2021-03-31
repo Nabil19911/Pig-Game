@@ -165,6 +165,8 @@ const initial = () => {
   diceImg.style.display = 'none';
   rollBtn.style.display = 'block';
   holdBtn.style.display = 'block';
+  score0.textContent = 0;
+  score1.textContent = 0;
 };
 
 initial();
