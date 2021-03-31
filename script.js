@@ -31,7 +31,7 @@ when click the roll the dice
     if rolled 1 remove all the current score and change the player
 
 when click the hold btn
-    update the score
+    update the score and change
 
 reset all when new btn pressed
 */
@@ -85,8 +85,11 @@ rollBtn.addEventListener('click', () => {
     currentScorePlayerTwo.textContent = currentScore;
   }
 });
+
 holdBtn.addEventListener('click', () => {
   if (playerOne.classList.contains('player--active')) {
+    playerOne.classList.remove('player--active');
+    playerTwo.classList.add('player--active');
     playerOneScore += currentScore;
     totalScorePlayerOne.textContent = playerOneScore;
     if (playerOneScore >= 100) {
@@ -99,6 +102,8 @@ holdBtn.addEventListener('click', () => {
     currentScore = 0;
     currentScorePlayerOne.textContent = currentScore;
   } else {
+    playerTwo.classList.remove('player--active');
+    playerOne.classList.add('player--active');
     playerTwoScore += currentScore;
     totalScorePlayerTwo.textContent = playerTwoScore;
     if (playerTwoScore >= 100) {
