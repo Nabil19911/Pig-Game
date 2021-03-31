@@ -168,6 +168,8 @@ const initial = () => {
   currentScore1.textContent = 0;
   rollBtn.style.display = 'block';
   holdBtn.style.display = 'block';
+  playerSection0.textContent = 'Player 1';
+  playerSection1.textContent = 'Player 2';
 };
 initial();
 
